@@ -1,0 +1,24 @@
+/* toggle theme by changing 'data-theme="theme_name"' attribute on the 'html' element */
+
+/* default and fallback theme (data-theme="light") */
+:root {
+    --body-bg: #ffffff;
+    --body-bg-tertiary: #ffffff;
+    --text-color: #000000;
+    --border-color: #272727;
+    
+    --button-primary-bg: #0b7dff;
+    --button-primary-bg-hover: #1056a7;
+    --button-primary-text: #ffffff;
+    
+    --input-background-color: #ffffff;
+}
+
+/* dark theme */
+[data-theme="dark"] {
+    --body-bg: #181717;
+    --body-bg-tertiary: #353232;
+    --text-color: #ffffff;
+
+    --input-background-color: var(--body-bg);
+}

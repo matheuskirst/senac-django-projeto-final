@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'styles/global.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/themes.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/buttons.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/forms.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/navbar.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% if user.is_authenticated %}
+        {% include 'header.html' %}
+        {% endif %}
+    </header>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <script type="module" src="{% static 'js/loadTheme.js' %}"></script>
+</body>
+</html>

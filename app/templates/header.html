@@ -1,0 +1,19 @@
+{% load static %}
+
+<nav class="navbar bg-body-tertiary border-bottom">
+    <a href="{% url 'dashboard' %}">
+        <img src="" alt="Logo">
+    </a>
+    <div>
+        <ul class="navbar-nav">
+            {% if perms.app.can_add_operator %}
+            <li class="nav-item">
+                <a href="{% url 'operators' %}" class="nav-link">Operadores</a>
+            </li>
+            {% endif %}
+            <li class="nav-item">
+                <a href="{% url 'inventory' %}" class="nav-link">Inventário</a>
+            </li>
+        </ul>
+    </div>
+</nav>

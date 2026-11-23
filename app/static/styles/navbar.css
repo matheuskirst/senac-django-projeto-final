@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-inline: 2rem;
+    align-items: center;
+    height: 70px;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    margin: 0;
+
+    list-style: none;
+    background-color: transparent;
+}
+
+.nav-item {
+    background-color: transparent;
+}
+
+.nav-link {
+    margin-top: 0;
+    padding: 0;
+    text-decoration: none;
+    background-color: transparent;
+}

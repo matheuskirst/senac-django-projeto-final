@@ -1,0 +1,19 @@
+.form-label {
+    margin-bottom: .5rem;
+}
+
+.form-control {
+    margin-bottom: 1px;
+    padding: .375rem .75rem;
+
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+
+    color: var(--text-color);
+
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+
+    background-color: var(--input-background-color);
+}

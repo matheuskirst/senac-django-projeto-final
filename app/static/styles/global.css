@@ -1,0 +1,22 @@
+/* variable colors from themes.css */
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: var(--body-bg);
+    color: var(--text-color);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+div {
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
