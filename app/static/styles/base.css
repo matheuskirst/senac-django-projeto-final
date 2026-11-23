@@ -1,5 +1,6 @@
 .container {
     width: 100% !important;
+    height: 100% !important;
 }
 
 .d-flex {
@@ -40,6 +41,14 @@
 
 .gap-3 {
     gap: 1rem !important;
+}
+
+.pi-3 {
+    padding-inline: 1rem !important;
+}
+
+.pi-4 {
+    padding-inline: 2rem !important;
 }
 
 .m-3 {

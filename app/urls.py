@@ -9,6 +9,7 @@ urlpatterns = [
     path("login/", LoginView.as_view(
         template_name="login.html",
         authentication_form=CpfAuthenticationForm,
+        # redirect_authenticated_user = True
     ), name="login"),
     path("logout/", LogoutView.as_view(), name="logout"),
 
