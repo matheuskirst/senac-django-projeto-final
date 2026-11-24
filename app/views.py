@@ -15,7 +15,7 @@ def dashboard(request: HttpRequest) -> HttpResponse:
 
 @group_required(ADMIN_GROUP)
 def operators(request: HttpRequest) -> HttpResponse:
-    return render(request, 'operators.html')
+    return render(request, 'personnel.html')
 
 @group_required(ADMIN_GROUP)
 def new_employee(request: HttpRequest) -> HttpResponse:
