@@ -16,4 +16,5 @@ urlpatterns = [
     path("operators/", views.operators, name="operators"),
     path("register-operator/", views.register_operator, name="register-operator"),
     path("inventory/", views.inventory, name="inventory"),
+    path("create-product/", views.create_product, name="create-product")
 ]

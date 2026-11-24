@@ -20,3 +20,7 @@ def register_operator(request: HttpRequest) -> HttpResponse:
 @group_required(ADMIN_GROUP, OPERATOR_GROUP)
 def inventory(request: HttpRequest) -> HttpResponse:
     return render(request, 'inventory.html')
+
+@group_required(ADMIN_GROUP)
+def create_product(request: HttpRequest) -> HttpResponse:
+    return render(request, 'create-product.html')
