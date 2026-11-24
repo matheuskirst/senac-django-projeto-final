@@ -6,6 +6,9 @@
 
     --body-bg: #ffffff;
     --body-bg-tertiary: #ffffff;
+
+    --selected-url-color: #00c3ff;
+
     --text-color: #000000;
     --border-color: #434242;
     
@@ -13,7 +16,11 @@
     --button-primary-bg-hover: #1056a7;
     --button-primary-text: #ffffff;
     
+    --button-outline-primary-bg: var(--button-primary-bg);
+    --button-outline-primary-bg-hover: var(--button-primary-bg-hover);
+
     --input-background-color: #ffffff;
+    --input-outline-color: #b1b1b1;
 }
 
 /* dark theme */

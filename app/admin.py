@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Operator
+from django.contrib.auth.admin import UserAdmin
+from .models import User
 
-admin.register(Operator)
+admin.site.register(User, UserAdmin)

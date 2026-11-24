@@ -23,8 +23,16 @@
 }
 
 .nav-link {
+    font-size: medium;
     margin-top: 0;
     padding: 0;
     text-decoration: none;
+    border-style: none;
     background-color: transparent;
+    cursor: pointer;
+}
+
+.selected-url {
+    color: var(--selected-url-color);
+    border-bottom: 1px solid var(--selected-url-color);
 }

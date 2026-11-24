@@ -1,7 +1,20 @@
+from django.conf import settings
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
-class Operator(models.Model):
+class User(AbstractUser):
+    is_employee = models.BooleanField(default=False)
+
+class EmployeeProfile(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     cpf = models.CharField(max_length=11, unique=True, error_messages={'unique': 'Este CPF já está cadastrado.'})
-    birthdate = models.DateField()
+    date_of_birth = models.DateField()
+    password = models.CharField(max_length=100)
+    confirm_password = models.CharField(max_length=100)
+
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="employee_profile"
+    )

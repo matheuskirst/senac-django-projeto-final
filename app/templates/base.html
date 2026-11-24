@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="pt-BR" data-theme="light">
 <head>
     {% load static %}
 
@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="{% static 'styles/buttons.css' %}">
     <link rel="stylesheet" href="{% static 'styles/forms.css' %}">
     <link rel="stylesheet" href="{% static 'styles/navbar.css' %}">
-    <title>{% block title %}{% endblock %}</title>
+    <title>WatchStock - {% block title %}{% endblock %}</title>
 </head>
 <body>
+    {% if user.is_authenticated %}
     <header>
-        {% if user.is_authenticated %}
         {% include 'components/header.html' %}
-        {% endif %}
     </header>
+    {% endif %}
 
     <main class="container">
         {% block content %}

@@ -3,22 +3,45 @@
 .btn {
     width: 100%;
     min-height: 2.5rem;
-    max-width: 12rem;
 
     font-size: 1rem;
     font-weight: 400;
+
+    text-align: center;
+    align-content: center;
 
     border: 1px solid var(--border-color);
     border-radius: 4px;
     cursor: pointer;
 }
 
+.btn-link {
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .btn-primary {
     background-color: var(--button-primary-bg);
     color: var(--button-primary-text);
+    border: 1px solid var(--button-primary-bg);
 }
 
 .btn-primary:hover {
     background-color: var(--button-primary-bg-hover);
-    border: 2px;
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    border: 1px solid var(--button-primary-bg);
+    color: var(--button-primary-bg);
+}
+
+.btn-outline-primary:hover {
+    color: var(--button-outline-primary-bg-hover);
+    border: 1px solid var(--button-outline-primary-bg-hover);
 }

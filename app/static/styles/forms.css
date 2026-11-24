@@ -14,6 +14,10 @@
 
     border: 1px solid var(--border-color);
     border-radius: 4px;
-
+    
     background-color: var(--input-background-color);
+}
+
+.form-control:focus {
+    outline-color: var(--input-outline-color);
 }

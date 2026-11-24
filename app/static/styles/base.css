@@ -1,38 +1,43 @@
 .w-1 {
-    width: 10rem;
+    width: 10rem !important;
 }
 
 .w-2 {
-    width: 20rem;
+    width: 20rem !important;
 }
 
 .w-3 {
-    width: 30rem;
+    width: 30rem !important;
 }
 
 .w-4 {
-    width: 40rem;
+    width: 40rem !important;
+}
+
+.max-w-1 {
+    max-width: 10rem !important;
 }
 
 .h-1 {
-    height: 10rem;
+    height: 10rem !important;
 }
 
 .h-2 {
-    height: 20rem;
+    height: 20rem !important;
 }
 
 .h-3 {
-    height: 30rem;
+    height: 30rem !important;
 }
 
 .h-4 {
-    height: 40rem;
+    height: 40rem !important;
 }
 
 .container {
     width: 100% !important;
     height: 100% !important;
+    background-color: transparent;
 }
 
 .d-flex {
