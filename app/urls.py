@@ -2,7 +2,7 @@ from django.urls import path
 from django.contrib.auth.views import LoginView, LogoutView
 
 from . import views
-from app.forms.CpfAuthenticationForm import CpfAuthenticationForm
+from app.forms.cpf_authentication_form import CpfAuthenticationForm
 
 urlpatterns = [
     path("", views.dashboard, name="dashboard"),
@@ -14,6 +14,6 @@ urlpatterns = [
     path("logout/", LogoutView.as_view(), name="logout"),
 
     path("operators/", views.operators, name="operators"),
-    path("register-operator/", views.register_operator, name="register-operator"),
+    path("new-operator/", views.new_operator, name="new-operator"),
     path("inventory/", views.inventory, name="inventory"),
 ]
