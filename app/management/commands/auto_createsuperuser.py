@@ -20,10 +20,10 @@ class Command(BaseCommand):
         User = get_user_model()
         print("Found project user model")
 
-        superuser = User.objects.get(username=ADMIN_USERNAME)
-        if superuser:
+        try:
+            superuser = User.objects.get(username=ADMIN_USERNAME)
             print("Superuser already exists")
-        else:
+        except:
             print("Creating superuser")
             superuser = User.objects.create_superuser(username=ADMIN_USERNAME, password=ADMIN_PASSWORD)
 
