@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{% static 'styles/global.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
     <link rel="stylesheet" href="{% static 'styles/themes.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
     <link rel="stylesheet" href="{% static 'styles/buttons.css' %}">
     <link rel="stylesheet" href="{% static 'styles/forms.css' %}">
     <link rel="stylesheet" href="{% static 'styles/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/tables.css' %}">
     <title>WatchStock - {% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -21,7 +22,7 @@
     </header>
     {% endif %}
 
-    <main class="pi-20">
+    <main class="container pi-2">
         {% block content %}
         {% endblock %}
     </main>

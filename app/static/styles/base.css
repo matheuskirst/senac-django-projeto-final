@@ -1,3 +1,7 @@
+.w-05 {
+    width: 5rem !important;
+}
+
 .w-1 {
     width: 10rem !important;
 }
@@ -35,9 +39,9 @@
 }
 
 .container {
-    width: 100% !important;
-    height: 100% !important;
-    background-color: transparent;
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
 }
 
 .d-flex {
@@ -64,12 +68,24 @@
     justify-content: center !important;
 }
 
+.justify-content-end {
+    justify-content: flex-end !important;
+}
+
 .justify-content-space-between {
     justify-content: space-between !important;
 }
 
+.align-content-space-between {
+    align-content: space-between !important;
+}
+
 .align-items-center {
     align-items: center !important;
+}
+
+.align-items-end {
+    align-items: flex-end !important;
 }
 
 .text-center {
@@ -78,6 +94,10 @@
 
 .gap-3 {
     gap: 1rem !important;
+}
+
+.p-5 {
+    padding: 5rem;
 }
 
 .pi-1 {
@@ -120,6 +140,22 @@
     color: #c21212 !important;
 }
 
+.bg-body {
+    background-color: var(--body-bg) !important;
+}
+
+.bg-body-secondary {
+    background-color: var(--body-bg-secondary) !important;
+}
+
 .bg-body-tertiary {
     background-color: var(--body-bg-tertiary) !important;
+}
+
+.w-scrollable {
+    overflow-x: scroll;
+}
+
+.h-scrollable {
+    overflow-y: scroll;
 }

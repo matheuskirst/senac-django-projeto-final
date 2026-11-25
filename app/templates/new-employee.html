@@ -14,7 +14,7 @@ Registrar Funcionário
             <div class="col">
                 <div class="d-flex flex-column">
                     <label for="first_name" class="form-label">Nome</label>
-                    <input type="text" name="first_name" id="first_name" class="form-control {% if form.first_name.errors %}border-danger{% endif %}">
+                    <input required type="text" name="first_name" id="first_name" class="form-control {% if form.first_name.errors %}border-danger{% endif %}">
                     <div>
                         {% if form.first_name.errors %}
                         {% for error in form.first_name.errors %}<span class="text-danger">{{ error }}</span>{% endfor %}
@@ -24,7 +24,7 @@ Registrar Funcionário
                 
                 <div class="d-flex flex-column">
                     <label for="last_name" class="form-label">Sobrenome</label>
-                    <input type="text" name="last_name" id="last_name" class="form-control {% if form.last_name.errors %}border-danger{% endif %}">
+                    <input required type="text" name="last_name" id="last_name" class="form-control {% if form.last_name.errors %}border-danger{% endif %}">
                     <div>
                         {% if form.last_name.errors %}
                         {% for error in form.last_name.errors %}<span class="text-danger">{{ error }}</span>{% endfor %}
@@ -34,7 +34,7 @@ Registrar Funcionário
                 
                 <div class="d-flex flex-column">
                     <label for="cpf" class="form-label">CPF</label>
-                    <input type="text" name="cpf" id="cpf" class="form-control {% if form.cpf.errors %}border-danger{% endif %}">
+                    <input required type="text" name="cpf" id="cpf" class="form-control {% if form.cpf.errors %}border-danger{% endif %}">
                     <div>
                         {% if form.cpf.errors %}
                         {% for error in form.cpf.errors %}<span class="text-danger">{{ error }}</span>{% endfor %}
@@ -44,7 +44,7 @@ Registrar Funcionário
                 
                 <div class="d-flex flex-column">
                     <label for="date_of_birth" class="form-label">Data de Nascimento</label>
-                    <input type="date" name="date_of_birth" id="date_of_birth" class="form-control {% if form.date_of_birth.errors %}border-danger{% endif %}">
+                    <input required type="date" name="date_of_birth" id="date_of_birth" class="form-control {% if form.date_of_birth.errors %}border-danger{% endif %}">
                     <div>
                         {% if form.date_of_birth.errors %}
                         {% for error in form.date_of_birth.errors %}<span class="text-danger">{{ error }}</span>{% endfor %}
@@ -56,7 +56,7 @@ Registrar Funcionário
             <div class="col">
                 <div class="d-flex flex-column">
                     <label for="role" class="form-label">Cargos</label>
-                    <select name="role" id="role" class="form-control {% if form.role.errors %}border-danger{% endif %}">
+                    <select required name="role" id="role" class="form-control {% if form.role.errors %}border-danger{% endif %}">
                         <option value="" selected disabled hidden>-- Selecione --</option>
 
                         {% if roles %}
@@ -74,7 +74,7 @@ Registrar Funcionário
 
                 <div class="d-flex flex-column">
                     <label for="password" class="form-label">Senha</label>
-                    <input type="password" name="password" id="password" class="form-control {% if form.password.errors %}border-danger{% endif %}">
+                    <input required type="password" name="password" id="password" class="form-control {% if form.password.errors %}border-danger{% endif %}">
                     <div>
                         {% if form.password.errors %}
                         {% for error in form.password.errors %}<span class="text-danger">{{ error }}</span>{% endfor %}
@@ -84,7 +84,7 @@ Registrar Funcionário
                 
                 <div class="d-flex flex-column">
                     <label for="confirm-password" class="form-label">Confirmar Senha</label>
-                    <input type="password" name="confirm_password" id="confirm-password" class="form-control {% if form.confirm_password.errors %}border-danger{% endif %}">
+                    <input required type="password" name="confirm_password" id="confirm-password" class="form-control {% if form.confirm_password.errors %}border-danger{% endif %}">
                     <div>
                         {% if form.confirm_password.errors %}
                         {% for error in form.confirm_password.errors %}<span class="text-danger">{{ error }}</span>{% endfor %}

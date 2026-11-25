@@ -7,6 +7,9 @@ from django.core.exceptions import ValidationError
 from ..models import EmployeeProfile
 
 class RegisterEmployeeForm(forms.ModelForm):
+    password = forms.CharField(max_length=100)
+    confirm_password = forms.CharField(max_length=100)
+
     role = forms.ModelChoiceField(
         queryset=Group.objects.all(),
         required=True,
@@ -26,8 +29,6 @@ class RegisterEmployeeForm(forms.ModelForm):
             'last_name',
             'cpf',
             'date_of_birth',
-            'password',
-            'confirm_password',
         ]
 
     def clean(self):
@@ -42,8 +43,6 @@ class RegisterEmployeeForm(forms.ModelForm):
                 User = get_user_model()
                 candidate_user = User(
                     username=cleaned_data.get("cpf"),
-                    first_name=cleaned_data.get("first_name"),
-                    last_name=cleaned_data.get("last_name"),
                 )
 
                 try:

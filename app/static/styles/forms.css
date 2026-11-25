@@ -3,7 +3,6 @@
 }
 
 .form-control {
-    margin-bottom: 1px;
     padding: .375rem .75rem;
 
     font-size: 1rem;
@@ -19,5 +18,7 @@
 }
 
 .form-control:focus {
+    outline-width: 1px;
     outline-color: var(--input-outline-color);
+    outline-offset: 0;
 }

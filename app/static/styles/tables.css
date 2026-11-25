@@ -1,0 +1,29 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-header-row {
+    background-color: var(--table-header-bg);
+}
+
+.table-header-cell {
+    color: var(--table-header-text);
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: transparent;
+}
+
+.table-row {
+    background-color: var(--table-row-bg);
+}
+
+.table-row:nth-child(even) {
+    background-color: var(--table-nth-row-bg);
+}
+
+.table-cell {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: transparent;
+}

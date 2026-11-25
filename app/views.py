@@ -14,8 +14,15 @@ def dashboard(request: HttpRequest) -> HttpResponse:
     return render(request, 'dashboard.html')
 
 @group_required(ADMIN_GROUP)
-def operators(request: HttpRequest) -> HttpResponse:
-    return render(request, 'personnel.html')
+def personnel(request: HttpRequest) -> HttpResponse:
+    personnel = EmployeeProfile.objects.all()
+    print(personnel)
+
+    context = {
+        "personnel": personnel
+    }
+
+    return render(request, 'personnel.html', context)
 
 @group_required(ADMIN_GROUP)
 def new_employee(request: HttpRequest) -> HttpResponse:
@@ -43,7 +50,7 @@ def new_employee(request: HttpRequest) -> HttpResponse:
                 user = User.objects.create_user(
                     username=employee.cpf,
                     password=employee_form.cleaned_data['password'],
-                    is_employee=True
+                    is_employee=True,
                 )
 
                 employee.user = user

@@ -5,6 +5,7 @@
     color-scheme: light;
 
     --body-bg: #ffffff;
+    --body-bg-secondary: #f7f7f7;
     --body-bg-tertiary: #ffffff;
 
     --selected-url-color: #00c3ff;
@@ -20,7 +21,12 @@
     --button-outline-primary-bg-hover: var(--button-primary-bg-hover);
 
     --input-background-color: #ffffff;
-    --input-outline-color: #b1b1b1;
+    --input-outline-color: #1056a7;
+
+    --table-header-bg: #83bdff;
+    --table-header-text: #ffffff;
+    --table-row-bg: #fcfcfc;
+    --table-nth-row-bg: #f1f1f1;
 }
 
 /* dark theme */
