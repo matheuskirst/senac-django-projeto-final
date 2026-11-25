@@ -80,12 +80,20 @@
     gap: 1rem !important;
 }
 
-.pi-3 {
+.pi-1 {
     padding-inline: 1rem !important;
 }
 
-.pi-4 {
+.pi-2 {
     padding-inline: 2rem !important;
+}
+
+.pi-10 {
+    padding-inline: 10rem !important;
+}
+
+.pi-20 {
+    padding-inline: 20rem !important;
 }
 
 .m-3 {

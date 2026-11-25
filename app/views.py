@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse
 from django.db import transaction
 from django.contrib.auth import get_user_model
@@ -19,6 +19,18 @@ def operators(request: HttpRequest) -> HttpResponse:
 
 @group_required(ADMIN_GROUP)
 def new_employee(request: HttpRequest) -> HttpResponse:
+    groups = Group.objects.all()
+
+    if request.method == 'GET':
+        employee_form = RegisterEmployeeForm()
+
+        context = {
+            "form": employee_form,
+            "roles": groups
+        }
+
+        return render(request, 'new-employee.html', context)
+
     if request.method == 'POST':
         employee_form = RegisterEmployeeForm(request.POST)
 
@@ -38,7 +50,13 @@ def new_employee(request: HttpRequest) -> HttpResponse:
                 employee.save()
                 user.groups.add(Group.objects.get(name=OPERATOR_GROUP))
 
-    return render(request, 'new-employee.html')
+            return redirect(to='personnel')
+
+        context = {
+            "form": employee_form,
+            "roles": groups
+        }
+        return render(request, 'new-employee.html', context)
 
 @group_required(ADMIN_GROUP, OPERATOR_GROUP)
 def inventory(request: HttpRequest) -> HttpResponse:

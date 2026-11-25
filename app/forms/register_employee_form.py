@@ -1,11 +1,24 @@
 from django import forms
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import Group
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
 
 from ..models import EmployeeProfile
 
 class RegisterEmployeeForm(forms.ModelForm):
+    role = forms.ModelChoiceField(
+        queryset=Group.objects.all(),
+        required=True,
+        empty_label="Selecione um cargo."
+    )
+
+    # roles = forms.ModelMultipleChoiceField(
+    #     queryset=Group.objects.all(),
+    #     required=True,
+    #     widget=forms.CheckboxSelectMultiple,
+    # )
+
     class Meta:
         model = EmployeeProfile
         fields = [
