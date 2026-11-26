@@ -172,3 +172,8 @@
     color: orange;
     background-color: transparent;
 }
+
+.textarea-1 {
+    width: 605px;
+    resize: none;
+}

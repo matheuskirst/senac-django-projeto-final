@@ -6,22 +6,24 @@ Adicionar Produtos
 {% endblock %}
 
 {% block content %}
-<div class="d-flex flex-column">
-    <h1>Adicionar Produtos</h1>
-    <form action="./" method="post" class="d-flex flex-row gap-3">
-        <div class="d-flex flex-column">
-            <label for="name" class="form-label">Nome do produto</label>
-            <input type="text" id="name" name="name" class="form-control">
-
-            <label for="description" class="form-label">Descrição do produto</label>
-            <input type="text" id="description" name="description" class="form-control">
+<div class="container justify-content-center align-items-center flex-column">
+    <div class="d-flex flex-column">
+        <h1>Adicionar Produtos</h1>
+    </div>
+    <form action="./" method="post" class="d-flex flex-column gap-3">
+        <div class="d-flex flex-row">
+            <div class="d-flex flex-column pi-1">
+                <label for="name" class="form-label">Nome do produto</label>
+                <input type="text" id="name" name="name" class="form-control">
+            </div>
+            <div class="d-flex flex-column">
+                <label for="price" class="form-label">Valor do produto</label>
+                <input type="text" id="price" name="price" class="form-control">
+            </div>
         </div>
-        <div class="d-flex flex-column">
-            <label for="price" class="form-label">Valor do produto</label>
-            <input type="text" id="price" name="price" class="form-control">
-    
-            <label for="quantity" class="form-label">Quantidade de produtos</label>
-            <input type="text" id="quantity" name="quantity" class="form-control">
+        <div class="d-flex flex-column pi-1">
+            <label for="description" class="form-label">Descrição do produto</label>
+            <textarea name="description" id="description" class="form-control textarea-1" rows="5"></textarea>
         </div>
     </form>
 </div>
