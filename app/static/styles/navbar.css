@@ -1,16 +1,16 @@
 .navbar {
     display: flex;
+    flex: 1;
+    overflow-y: auto;
     justify-content: space-between;
     position: sticky;
     top: 0;
     padding-inline: 2rem;
     align-items: center;
-    height: 100px;
 }
 
 .navbar-nav {
     display: flex;
-    flex-direction: row;
     gap: 1rem;
 
     margin: 0;

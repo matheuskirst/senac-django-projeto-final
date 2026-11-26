@@ -1,32 +1,33 @@
 {% load static %}
-
-<nav class="navbar bg-body-tertiary border-bottom">
-    <a href="{% url 'dashboard' %}">
-        {% include 'components/title.html' %}
-    </a>
-    <div>
-        <ul class="navbar-nav">
-            {% if perms.app.can_add_operator %}
-            <li class="nav-item">
-                <a href="{% url 'personnel' %}" class="nav-link">Funcionários</a>
-            </li>
-            {% endif %}
-            <li class="nav-item">
-                <a href="{% url 'inventory' %}" class="nav-link">Inventário</a>
-            </li>
-            <li class="nav-item">
-                <form action="{% url 'logout' %}" method="post" class="container">
-                    {% csrf_token %}
-                    <button type="submit" class="nav-button">Sair</button>
-                </form>
-            </li>
-        </ul>
-    </div>
-    <script>
-        let currentPath = location.pathname
-        let navLink = document.querySelector(`.nav-link[href="${currentPath}"]`)
-        if (navLink) {
-            navLink.classList.add('selected-url');
-        }
-    </script>
-</nav>
+<header>
+    <nav class="navbar bg-body-tertiary border-bottom">
+        <a href="{% url 'dashboard' %}">
+            {% include 'components/title.html' %}
+        </a>
+        <div>
+            <ul class="navbar-nav">
+                {% if perms.app.can_add_operator %}
+                <li class="nav-item">
+                    <a href="{% url 'personnel' %}" class="nav-link">Funcionários</a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a href="{% url 'inventory' %}" class="nav-link">Inventário</a>
+                </li>
+                <li class="nav-item">
+                    <form action="{% url 'logout' %}" method="post" class="container">
+                        {% csrf_token %}
+                        <button type="submit" class="nav-button">Sair</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <script>
+            let currentPath = location.pathname
+            let navLink = document.querySelector(`.nav-link[href="${currentPath}"]`)
+            if (navLink) {
+                navLink.classList.add('selected-url');
+            }
+        </script>
+    </nav>
+</header>
