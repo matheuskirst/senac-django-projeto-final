@@ -47,7 +47,7 @@ def personnel(request: HttpRequest) -> HttpResponse:
     return render(request, 'personnel.html', context)
 
 @group_required(ADMIN_GROUP)
-def new_employee(request: HttpRequest) -> HttpResponse:
+def register_employee(request: HttpRequest) -> HttpResponse:
     groups = Group.objects.all()
 
     if request.method == 'GET':
@@ -85,12 +85,12 @@ def new_employee(request: HttpRequest) -> HttpResponse:
             "form": employee_form,
             "roles": groups
         }
-        return render(request, 'new-employee.html', context)
+        return render(request, 'register-employee.html', context)
 
 @group_required(ADMIN_GROUP, OPERATOR_GROUP)
 def inventory(request: HttpRequest) -> HttpResponse:
     return render(request, 'inventory.html')
 
 @group_required(ADMIN_GROUP)
-def create_product(request: HttpRequest) -> HttpResponse:
-    return render(request, 'create-product.html')
+def register_product(request: HttpRequest) -> HttpResponse:
+    return render(request, 'register-product.html')

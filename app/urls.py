@@ -14,8 +14,8 @@ urlpatterns = [
     path("logout/", LogoutView.as_view(), name="logout"),
 
     path("personnel/", views.personnel, name="personnel"),
-    path("register-employee/", views.new_employee, name="register-employee"),
+    path("register-employee/", views.register_product, name="register-employee"),
 
     path("inventory/", views.inventory, name="inventory"),
-    path("register-product/", views.create_product, name="register-product")
+    path("register-product/", views.register_product, name="register-product")
 ]
