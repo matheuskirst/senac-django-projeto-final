@@ -3,13 +3,33 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Group
 
 from ...models import EmployeeProfile
-from ...groups import OPERATOR_GROUP
+from ...groups import ADMIN_GROUP, OPERATOR_GROUP
 
 class Command(BaseCommand):
     help = "Populate the database with employees"
 
     def handle(self, *args, **options):
+        self.create_admins()
         self.create_operators()
+
+    def create_admins(self):
+        User = get_user_model()
+
+        user = User.objects.create_user(
+            username='administrador',
+            password='Teste12345',
+            is_employee=True
+        )
+
+        user.groups.add(Group.objects.get(name=ADMIN_GROUP))
+
+        EmployeeProfile.objects.create(
+            first_name="John",
+            last_name="Marston",
+            cpf="32145666512",
+            date_of_birth="2000-01-02",
+            user=user
+        )
 
     def create_operators(self):
         User = get_user_model()
@@ -27,10 +47,12 @@ class Command(BaseCommand):
             ("01234567890", "Beatriz", "Lima"),
         ]
 
+        
+
         for cpf, first_name, last_name in users:
             user = User.objects.create_user(
                 username=cpf,
-                password="Test12345",
+                password="Teste12345",
                 is_employee=True
             )
 
