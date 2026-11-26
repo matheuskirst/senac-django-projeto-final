@@ -9,6 +9,7 @@
 
     background-color: var(--body-bg);
     color: var(--text-color);
+    box-sizing: border-box;
 }
 
 html,

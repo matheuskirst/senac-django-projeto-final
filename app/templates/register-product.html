@@ -11,17 +11,17 @@ Registrar Produtos
         <h1>Registrar Produto</h1>
     </div>
     <form action="./" method="post" class="d-flex flex-column gap-3">
-        <div class="d-flex flex-row">
-            <div class="d-flex flex-column pi-1">
+        <div class="d-flex flex-row justify-content-space-between">
+            <div class="d-flex flex-column" style="width: 45%">
                 <label for="name" class="form-label">Nome do produto</label>
                 <input type="text" id="name" name="name" class="form-control">
             </div>
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column" style="width: 45%">
                 <label for="price" class="form-label">Valor do produto</label>
                 <input type="text" id="price" name="price" class="form-control">
             </div>
         </div>
-        <div class="d-flex flex-column pi-1">
+        <div class="d-flex flex-column">
             <label for="description" class="form-label">Descrição do produto</label>
             <textarea name="description" id="description" class="form-control textarea-1" rows="5"></textarea>
         </div>
