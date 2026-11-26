@@ -18,6 +18,10 @@
     width: 40rem !important;
 }
 
+.w-5 {
+    width: 50rem !important;
+}
+
 .max-w-1 {
     max-width: 10rem !important;
 }
@@ -158,4 +162,13 @@
 
 .h-scrollable {
     overflow-y: scroll;
+}
+
+.title {
+    background-color: transparent;
+}
+
+.title span {
+    color: orange;
+    background-color: transparent;
 }

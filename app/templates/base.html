@@ -2,6 +2,7 @@
 <html lang="pt-BR" data-theme="light">
 <head>
     {% load static %}
+    <script type="module" src="{% static 'js/loadTheme.js' %}"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +27,5 @@
         {% block content %}
         {% endblock %}
     </main>
-    <script type="module" src="{% static 'js/loadTheme.js' %}"></script>
 </body>
 </html>

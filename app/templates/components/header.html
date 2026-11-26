@@ -2,7 +2,7 @@
 
 <nav class="navbar bg-body-tertiary border-bottom">
     <a href="{% url 'dashboard' %}">
-        <img src="" alt="Logo">
+        {% include 'components/title.html' %}
     </a>
     <div>
         <ul class="navbar-nav">
@@ -17,7 +17,7 @@
             <li class="nav-item">
                 <form action="{% url 'logout' %}" method="post" class="container">
                     {% csrf_token %}
-                    <button type="submit" class="nav-link">Sair</button>
+                    <button type="submit" class="nav-button">Sair</button>
                 </form>
             </li>
         </ul>

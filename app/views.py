@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse
 from django.db import transaction
+from django.db.models import Q
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Group
 
@@ -15,11 +16,32 @@ def dashboard(request: HttpRequest) -> HttpResponse:
 
 @group_required(ADMIN_GROUP)
 def personnel(request: HttpRequest) -> HttpResponse:
+    search_field = request.GET.get(key="search", default="").strip()
+    selected_roles = request.GET.get(key="roles", default="")
+
+    last_search = {
+        "search_field": search_field,
+        "role": selected_roles
+    }
+
+    roles = Group.objects.all()
+
     personnel = EmployeeProfile.objects.all()
-    print(personnel)
+    personnel = personnel.filter(
+        Q(first_name__icontains=search_field)
+        | Q(last_name__icontains=search_field)
+        | Q(cpf__contains=search_field)
+    )
+
+    try:
+        personnel = personnel.filter(user__groups__pk=int(selected_roles))
+    except:
+        pass
 
     context = {
-        "personnel": personnel
+        "personnel": personnel,
+        "roles": roles,
+        "search": last_search
     }
 
     return render(request, 'personnel.html', context)

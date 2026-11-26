@@ -1,4 +1,11 @@
+.table-topbar {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--table-border);
+}
+
 .table {
+    display: table;
+    table-layout: auto;
     border-collapse: collapse;
     width: 100%;
 }
@@ -9,8 +16,10 @@
 
 .table-header-cell {
     color: var(--table-header-text);
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding-inline: 10px;
+    padding-block: 15px;
+    border: 1px solid var(--table-border);
+    border-bottom: 1px solid #ddd;
     background-color: transparent;
 }
 
@@ -23,7 +32,10 @@
 }
 
 .table-cell {
-    padding: 10px;
-    border: 1px solid #ddd;
+    display: table-cell;
+    color: var(--table-row-text);
+    padding-inline: 10px;
+    padding-block: 12px;
+    border: 1px solid var(--table-border);
     background-color: transparent;
 }

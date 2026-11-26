@@ -5,7 +5,7 @@
     top: 0;
     padding-inline: 2rem;
     align-items: center;
-    height: 70px;
+    height: 100px;
 }
 
 .navbar-nav {
@@ -24,7 +24,14 @@
 }
 
 .nav-link {
-    font-size: medium;
+    margin-top: 0;
+    padding: 0;
+    text-decoration: none;
+    border-style: none;
+    background-color: transparent;
+}
+
+.nav-button {
     margin-top: 0;
     padding: 0;
     text-decoration: none;

@@ -23,10 +23,12 @@
     --input-background-color: #ffffff;
     --input-outline-color: #1056a7;
 
-    --table-header-bg: #83bdff;
-    --table-header-text: #ffffff;
+    --table-border: #6b6b6b;
+    --table-header-bg: #cfcfcf;
+    --table-header-text: #000000;
     --table-row-bg: #fcfcfc;
     --table-nth-row-bg: #f1f1f1;
+    --table-row-text: #000000;
 }
 
 /* dark theme */
@@ -34,8 +36,14 @@
     color-scheme: dark;
 
     --body-bg: #181717;
-    --body-bg-tertiary: #353232;
+    --body-bg-tertiary: #000000;
     --text-color: #ffffff;
-
+    
     --input-background-color: var(--body-bg);
+    
+    --table-header-bg: #141414;
+    --table-header-text: #ffffff;
+    --table-row-bg: #181717;
+    --table-nth-row-bg: #000000;
+    --table-row-text: #f1f1f1;
 }

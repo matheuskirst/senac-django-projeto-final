@@ -45,3 +45,13 @@
     color: var(--button-outline-primary-bg-hover);
     border: 1px solid var(--button-outline-primary-bg-hover);
 }
+
+.btn-danger {
+    background-color: red;
+    color: var(--button-primary-text);
+    border: 1px solid #000000;
+}
+
+.btn-danger:hover {
+    background-color: crimson;
+}
