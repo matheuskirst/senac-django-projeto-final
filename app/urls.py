@@ -5,7 +5,6 @@ from . import views
 from .forms import AppAuthenticationForm
 
 urlpatterns = [
-    path("", views.dashboard, name="dashboard"),
     path("login/", LoginView.as_view(
         template_name="login.html",
         authentication_form=AppAuthenticationForm,
@@ -13,9 +12,11 @@ urlpatterns = [
     ), name="login"),
     path("logout/", LogoutView.as_view(), name="logout"),
 
-    path("personnel/", views.personnel, name="personnel"),
-    path("register-employee/", views.register_product, name="register-employee"),
+    path("", views.DashboardView.as_view(), name="dashboard"),
 
-    path("inventory/", views.inventory, name="inventory"),
-    path("register-product/", views.register_product, name="register-product")
+    path("personnel/", views.PersonnelView.as_view(), name="personnel"),
+    path("register-employee/", views.RegisterEmployeeView.as_view(), name="register-employee"),
+
+    path("inventory/", views.InventoryView.as_view(), name="inventory"),
+    path("register-product/", views.RegisterProductView.as_view(), name="register-product")
 ]
