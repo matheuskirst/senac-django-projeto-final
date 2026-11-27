@@ -1,2 +1,5 @@
 from .app_authentication_form import AppAuthenticationForm
 from .register_employee_form import RegisterEmployeeForm
+from .register_inventory_facility_form import InventoryFacility
+from .register_supplier_form import RegisterSupplierForm
+from .register_product_form import RegisterProductForm

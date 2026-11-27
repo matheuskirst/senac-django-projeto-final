@@ -2,7 +2,7 @@ from django import forms
 
 from ..models import Supplier
 
-class RegisterEmployeeForm(forms.ModelForm):
+class RegisterSupplierForm(forms.ModelForm):
     class Meta:
         model = Supplier
         fields = [
