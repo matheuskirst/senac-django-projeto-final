@@ -35,5 +35,3 @@ class Command(BaseCommand):
                 print(f"Added superuser to group '{ADMIN_GROUP}'")
             except Exception as e:
                 print(f'Database error: {e}')
-
-        print("Done")
