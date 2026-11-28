@@ -3,3 +3,4 @@ from .personnel_view import PersonnelView
 from .inventory_view import InventoryView
 from .register_employee_view import RegisterEmployeeView
 from .register_product_view import RegisterProductView
+from .check_order_view import CheckOrderView

@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from ..models import EmployeeProfile
 
 class PersonnelView(PermissionRequiredMixin, TemplateView):
-    template_name = "personnel.html"
+    template_name = "pages/administrator/personnel.html"
     permission_required = "app.view_employeeprofile"
 
     def get_context_data(self, **kwargs):
