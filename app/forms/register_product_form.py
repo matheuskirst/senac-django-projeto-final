@@ -8,8 +8,5 @@ class RegisterProductForm(forms.ModelForm):
         fields = [
             'name',
             'description',
-            'unit_cost',
-            'selling_price',
             'reorder_point',
-            'supplier',
         ]

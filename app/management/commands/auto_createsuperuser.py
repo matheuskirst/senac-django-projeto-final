@@ -6,7 +6,7 @@ from django.core.management import BaseCommand
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Group
 
-from app.groups import ADMIN_GROUP
+from app.groups import ADMINISTRATOR_GROUP
 
 class Command(BaseCommand):
     help = "Create a superuser and add it to the 'Admin' employee group. Use ADMIN_USERNAME and ADMIN_PASSWORD in your .env"
@@ -28,10 +28,10 @@ class Command(BaseCommand):
             superuser = User.objects.create_superuser(username=ADMIN_USERNAME, password=ADMIN_PASSWORD)
 
             try:
-                admin_group = Group.objects.get(name=ADMIN_GROUP)
-                print(f"Found group '{ADMIN_GROUP}'")
+                admin_group = Group.objects.get(name=ADMINISTRATOR_GROUP)
+                print(f"Found group '{ADMINISTRATOR_GROUP}'")
 
                 superuser.groups.add(admin_group)
-                print(f"Added superuser to group '{ADMIN_GROUP}'")
+                print(f"Added superuser to group '{ADMINISTRATOR_GROUP}'")
             except Exception as e:
                 print(f'Database error: {e}')

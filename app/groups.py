@@ -1,2 +1,3 @@
-ADMIN_GROUP = 'Administradores'
-OPERATOR_GROUP = 'Operadores'
+ADMINISTRATOR_GROUP = 'Administrador'
+MANAGER_GROUP = 'Gerente'
+OPERATOR_GROUP = 'Operador'

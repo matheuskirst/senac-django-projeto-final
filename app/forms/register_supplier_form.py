@@ -10,5 +10,4 @@ class RegisterSupplierForm(forms.ModelForm):
             'contact_name',
             'email',
             'phone_number',
-            'payment_terms',
         ]

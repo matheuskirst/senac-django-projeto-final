@@ -1,10 +1,10 @@
 from django.db import models
 
 from .product import Product
-from .inventory_facility import InventoryFacility
+from .facility import Facility
 
 class StockLevel(models.Model):
-    facility = models.ForeignKey(InventoryFacility, on_delete=models.CASCADE)
+    facility = models.ForeignKey(Facility, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, to_field="sku", db_column="sku", on_delete=models.CASCADE)
     location = models.CharField(max_length=50)
     quantity = models.PositiveIntegerField(default=0)

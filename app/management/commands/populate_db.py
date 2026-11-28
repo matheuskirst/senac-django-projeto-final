@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Group
 
 from ...models import EmployeeProfile
-from ...groups import ADMIN_GROUP, OPERATOR_GROUP
+from ...groups import ADMINISTRATOR_GROUP, OPERATOR_GROUP
 
 class Command(BaseCommand):
     help = "Populate the database with employees"
@@ -21,7 +21,7 @@ class Command(BaseCommand):
             is_employee=True
         )
 
-        user.groups.add(Group.objects.get(name=ADMIN_GROUP))
+        user.groups.add(Group.objects.get(name=ADMINISTRATOR_GROUP))
 
         EmployeeProfile.objects.create(
             first_name="John",
